@@ -24,8 +24,6 @@ class Curl implements CurlInterface
 
         $response = new CurlResponse($data, curl_getinfo($request, CURLINFO_HTTP_CODE));
 
-        curl_close($request);
-
         return $response;
     }
 }
